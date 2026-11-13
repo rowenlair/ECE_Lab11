@@ -21,7 +21,7 @@ Created a modulo divider that divides a clock signal by 12 with a count of 6 and
 Because it only toggles on the positive edge, when the clock goes from 0 to 1, whereas the clock toggles from 0 to 1 then 1 to 0.
 
 ### 2 - Why does the ring counter's output go to all 1s on the first clock cycle?
-
+For a down counter they would all be looking at the positive edge of the one before them so when clock is a postive edge for the first time they'll all be 1.
 
 ### 3 - What width of ring counter would you use to get to an output of ~1KHz?
 we start with 100 mhz or 100,000,000 and want an output of 1000. We can do 100,000,000 / 1000 = 100,000 and log base 2 of this is 17, which actually gives us 763 khz, but it's the closest we can get to 1,000.
